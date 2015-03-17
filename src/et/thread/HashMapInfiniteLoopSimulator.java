@@ -46,12 +46,12 @@ public class HashMapInfiniteLoopSimulator {
                     threadSafeMap2 = new HashMap<String, Integer>(2);
                     threadSafeMap2 = Collections.synchronizedMap(threadSafeMap2);
                    
-                    // ConcurrentHashMap (since JDK 1.5)
+                    // ConcurrentHashMap (since JDK 1.5)l
                     threadSafeMap3 = new ConcurrentHashMap<String, Integer>(2); // ConcurrentHashMap
                    
                    
                     /*** Assign map at your convenience ****/
-                    assignedMapForTest = threadSafeMap3;
+                    assignedMapForTest = nonThreadSafeMap;
                    
                    
                     long timeBefore = System.currentTimeMillis();

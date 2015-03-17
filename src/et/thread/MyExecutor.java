@@ -39,6 +39,10 @@ public class MyExecutor {
 	public static void main(String args[]) {
 		MyExecutor e = new MyExecutor();
 		e.test2();
+		
+		GenericsTest<MyService> a = new GenericsTest<MyService>();
+		a.setTestItem(new MyService());
+		System.out.println(a.getTestItem().get());
 	}
 	
 }
